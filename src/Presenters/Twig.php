@@ -23,20 +23,20 @@ class Twig implements PresenterInterface {
 		$layout = ''
 	) {
 		$loader = new \Twig_Loader_Filesystem($templatePath);
-		$twig = new \Twig_Environment($loader, array(
+		$twig   = new \Twig_Environment($loader, array(
 			'cache' => $cachePath
 		));
 
-		$this->twig = $twig;
+		$this->twig         = $twig;
 		$this->templatePath = $templatePath;
-		$this->template = $template;
-		$this->layout = $layout;
+		$this->template     = $template;
+		$this->layout       = $layout;
 	}
 
 	public function Render(Response $response, array $data) {
 		if (strlen($this->layout)) {
 			$data['pageTemplate'] = $this->template;
-			$template = $this->layout;
+			$template             = $this->layout;
 		} else {
 			$template = $this->template;
 		}
