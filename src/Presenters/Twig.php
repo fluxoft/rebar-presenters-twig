@@ -20,11 +20,13 @@ class Twig implements PresenterInterface {
 		$templatePath,
 		$cachePath,
 		$template = '/default.html.twig',
-		$layout = ''
+		$layout = '',
+		$debug = false
 	) {
 		$loader = new \Twig_Loader_Filesystem($templatePath);
 		$twig   = new \Twig_Environment($loader, array(
-			'cache' => $cachePath
+			'cache' => $cachePath,
+			'debug' => $debug
 		));
 
 		$this->twig         = $twig;
