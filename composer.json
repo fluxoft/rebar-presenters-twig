@@ -13,7 +13,7 @@
     "minimum-stability": "beta",
 	"require": {
 		"php": ">=5.4.0",
-		"fluxoft/rebar": "0.16.*",
+		"fluxoft/rebar": "^0.17.10",
 		"twig/twig": "1.*"
 	},
 	"require-dev": {
